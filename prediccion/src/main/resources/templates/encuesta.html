@@ -64,19 +64,77 @@
             </div>
             <h3>Información Académica</h3>
             <div class="row">
-                <div class="col">
-                    <label class="form-label" for="year">¿En qué
-                        año ingresaste a la carrera?:</label>
-                    <input class="form-control" type="number" min ="2017"
-                           max ="2024" id="year" name="year">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="year">¿En qué
+                            año ingresaste a la carrera?:</label>
+                        <input class="form-control" type="number" min ="2017"
+                               max ="2024" id="year" name="year">
+                    </div>
                 </div>
-            </div>
-            <div class="row pt-4">
-                <div class="col">
-                    <a href="/capacitacion" class="btn btn-secondary">Volver</a>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="participation">¿Qué tan
+                            seguido participas en las actividades de esparcimiento
+                            de Duoc?:</label>
+                        <select class="form-select" id="participation"
+                                name="participation"
+                                aria-label="Selecciona una opción">
+                            <option  value="frecuentemente">Frecuentemente</option>
+                            <option  value="aVeces">A veces</option>
+                            <option  value="Nunca">Nunca</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="approbed">¿Cuántas
+                            materias has aprobado a la fecha?:</label>
+                        <input class="form-control" type="number" min ="0"
+                               max ="50" id="approbed" name="approbed">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="repprobed">¿Cuántas
+                            materias has reprobado a la fecha?:</label>
+                        <input class="form-control" type="number" min ="0"
+                               max ="50" id="repprobed" name="repprobed">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="omitted">¿Cuántas
+                            materias has omitido/eximido/convalidado hasta la
+                            fecha?:</label>
+                        <input class="form-control" type="number" min ="0"
+                               max ="50" id="omitted" name="omitted">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="average">¿Cuál es,
+                            aproximadamente, tu promedio general hasta la
+                            fecha?:</label>
+                        <input class="form-control" type="number" min ="0.0"
+                               max ="7.0" id="average" name="average"
+                               step="0.1">
+                    </div>
+                </div>
+
+                <div class="row pt-4">
+                    <div class="col">
+                        <a href="/capacitacion" class="btn btn-secondary">Volver</a>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary" >
+                            Guardar</button>
+                    </div>
                 </div>
             </div>
         </form>
