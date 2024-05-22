@@ -1,5 +1,12 @@
 package cl.webprediccion.prediccion.model.persistence.entity;
 import jakarta.persistence.*;
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name="estudiante1")
 public class Estudiante {

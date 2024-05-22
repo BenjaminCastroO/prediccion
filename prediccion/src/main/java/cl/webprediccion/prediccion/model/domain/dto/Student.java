@@ -6,27 +6,31 @@ import lombok.*;
 @Setter
 @ToString
 public class Student {
-  private String mail;
+  private int idestudiante1;
   private String name;
+  private String mail;
   private String celphone;
   private int age;
   private String gender;
 
-  private int continuity;
-  private int studyTime;
-  private int friendTime;
-  private int sportTime;
-  private int hobbyTime;
+  private int year;
+  private String participation;
+  private double average;
+  private int approbed;
+  private String repprobed;
+  private String ommited;
 
-  private int stress;
-  private int satisfaction;
+  private String continuity;
+  private String studyTime;
+  private String sportTime;
+  private String friendTime;
+  private String hobbyTime;
+
+  private String stress;
+  private String satisfaction;
 
   private String employment;
   private String travelTime;
 
-  private int year;
-  private int approbed;
-  private int repprobed;
-  private int ommited;
-  private float average;
+
 }
