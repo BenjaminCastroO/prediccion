@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.com">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
         </section>
     </div>
     <div class = "container">
-        <form class ="form">
+        <form class ="form" method = "post" th:action="@{/encuesta}">
             <h3>Información personal</h3>
             <div class="row">
                 <div class="row">
@@ -36,10 +36,10 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label class="form-label" for="celphone">Número de
+                        <label class="form-label" for="cellphone">Número de
                             celular:</label>
                         <input class="form-control" type="text"
-                               id="celphone" name="celphone">
+                               id="cellphone" name="cellphone">
                     </div>
                 </div>
                 <div class="row">
@@ -64,166 +64,20 @@
             </div>
             <h3>Motivación</h3>
             <div class="row">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="continuity">¿Qué
-                            tan motivado te encuentras para continuar la
-                            carrera? de 1 siendo poca la motivación hasta 10
-                            significando mucha motivación</label>
-                        <input class="form-control" type="number"
-                               id="continuity" name="continuity" min="0"
-                               max="10">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="studyTime">¿Cuántas
-                            horas semanales le dedicas al estudio fuera de
-                            clases?</label>
-                        <input class="form-control" type="number"
-                               id="studyTime" name="studyTime" min="0" max="30">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="friendTime">¿Cuántas
-                            horas semanales le dedicas a pasar tiempo
-                            con tus amigos?</label>
-                        <input class="form-control" type="number"
-                               id="friendTime" name="friendTime" min="0"
-                               max="30">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="sportTime">¿Cuántas
-                            horas semanales le dedicas a realizar
-                            deporte?</label>
-                        <input class="form-control" type="number"
-                               id="sportTime" name="sportTime" min="0"
-                               max="30">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="hobbyTime">¿Cuántas
-                            horas semanales dedicas a realizar
-                            tu hobby favorito?</label>
-                        <input class="form-control" type="number"
-                               id="hobbyTime" name="hobbyTime" min="0"
-                               max="30">
-                    </div>
-                </div>
 
             </div>
             <h3>Salud</h3>
             <div class="row">
 
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="stress">¿Qué
-                            tan estresado te encuentras académicamente? de 1
-                            siendo poco estresado hasta 10
-                            significando mucho estrés</label>
-                        <input class="form-control" type="number"
-                               id="stress" name="stress" min="0"
-                               max="10">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="satisfaction">¿Qué
-                            tan satisfecho te encuentras con la carrera? de 1
-                            siendo poco satisfecho hasta 10
-                            significando muy satisfecho</label>
-                        <input class="form-control" type="number"
-                               id="satisfaction" name="satisfaction" min="0"
-                               max="10">
-                    </div>
-                </div>
 
             </div>
             <h3>Situación económica</h3>
             <div class="row">
 
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="employment">Seleccione la
-                            situación laboral que mejor lo describa en el
-                            último año:
-                        </label>
-                        <select class="form-select" id="employment"
-                                 name="employment"
-                                 aria-label="Selecciona tu situación laboral">
-                            <option  value="fullTime">Empleado
-                                full-time</option>
-                            <option  value="partTime">Empleado
-                                Part-time</option>
-                            <option  value="desempleado">Desempleado</option>
-                            <option  value="emprendedor">Emprendedor</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="travelTime">¿Cuántos
-                            minutos demoras en trasladarte desde tu hogar a
-                            tu sede Duoc?</label>
-                        <input class="form-control" type="number"
-                               id="travelTime" name="travelTime" min="0"
-                               max="200">
-                    </div>
-                </div>
 
             </div>
             <h3>Información Académica</h3>
             <div class="row">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="year">¿En qué
-                            año ingresaste a la carrera?:</label>
-                        <input class="form-control" type="number" min ="2017"
-                               max ="2024" id="year" name="year">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="participation">¿Qué tan
-                            seguido participas en las actividades de esparcimiento
-                            de Duoc?:</label>
-                        <select class="form-select" id="participation"
-                                name="participation"
-                                aria-label="Selecciona una opción">
-                            <option  value="frecuentemente">Frecuentemente</option>
-                            <option  value="aVeces">A veces</option>
-                            <option  value="Nunca">Nunca</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="approbed">¿Cuántas
-                            materias has aprobado a la fecha?:</label>
-                        <input class="form-control" type="number" min ="0"
-                               max ="50" id="approbed" name="approbed">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="repprobed">¿Cuántas
-                            materias has reprobado a la fecha?:</label>
-                        <input class="form-control" type="number" min ="0"
-                               max ="50" id="repprobed" name="repprobed">
-                    </div>
-                </div>
 
                 <div class="row">
                     <div class="col">
@@ -237,22 +91,11 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="omitted">¿Cuántas
-                            materias has omitido/eximido/convalidado hasta la
-                            fecha?:</label>
-                        <input class="form-range" type="range" min ="0"
-                               max ="50" id="omitted" name="omitted"
-                               onInput="$('#rangeval').html($(this).val())">
-                        <span id="rangeval">--</span>
-                    </div>
-                </div>
-
 
                 <div class="row pt-4">
                     <div class="col">
-                        <a href="/cap" class="btn btn-secondary">Volver</a>
+                        <a href="/api/encuesta" class="btn btn-secondary">Volver
+                        </a>
                     </div>
                     <div class="col">
                         <button type="submit" class="btn btn-primary" >

@@ -1,39 +1,26 @@
+//probar si es que funciona sin mapearlos uno por uno ya que los campos se
+// llaman igual
 package cl.webprediccion.prediccion.model.persistence.mapper;
-import cl.webprediccion.prediccion.model.domain.dto.Student;
-import cl.webprediccion.prediccion.model.persistence.entity.Estudiante;
+import cl.webprediccion.prediccion.model.domain.dto.StudentDTO;
+import cl.webprediccion.prediccion.model.persistence.entity.StudentEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
-
 import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface StudentMapper {
   @Mappings({
-    @Mapping(source = "idestudiante1", target = "idestudiante1"),
-    @Mapping(source = "nombre", target = "name"),
-    @Mapping(source = "correo", target = "mail"),
-    @Mapping(source = "celular", target = "celphone"),
-    @Mapping(source = "edad", target = "age"),
-    @Mapping(source = "genero", target = "gender"),
-    @Mapping(source = "anioIngreso", target = "year"),
-    @Mapping(source = "participacion", target = "participation"),
-    @Mapping(source = "promedio", target = "average"),
-    @Mapping(source = "aprobadas", target = "approbed"),
-    @Mapping(source = "reprobadas", target = "repprobed"),
-    @Mapping(source = "omitidas", target = "ommited"),
-    @Mapping(source = "motivacion", target = "continuity"),
-    @Mapping(source = "tiempoEstudio", target = "studyTime"),
-    @Mapping(source = "tiempoDeporte", target = "sportTime"),
-    @Mapping(source = "tiempoAmigos", target = "friendTime"),
-    @Mapping(source = "tiempoHobby", target = "hobbyTime"),
-    @Mapping(source = "estres", target = "stress"),
-    @Mapping(source = "satisfaccion", target = "satisfaction"),
-    @Mapping(source = "laboral", target = "employment"),
-    @Mapping(source = "distancia", target = "travelTime")})
-  Student toStudent(Estudiante estudiante);
-  List<Student> toStudents(List<Estudiante> estudiante);
+          @Mapping(source = "id", target = "id"),
+          @Mapping(source = "name", target = "name"),
+          @Mapping(source = "mail", target = "mail"),
+          @Mapping(source = "cellphone", target = "cellphone"),
+          @Mapping(source = "age", target = "age"),
+          @Mapping(source = "gender", target = "gender"),
+          @Mapping(source = "average", target = "average")})
+  StudentDTO toStudentDTO(StudentEntity studentEntity);
+List<StudentDTO> toStudentsDTO(List<StudentEntity> studentEntity);
   @InheritInverseConfiguration
-  Estudiante toEstudiante(Student student);
+  StudentEntity toStudentEntity(StudentDTO studentDTO);
 }
