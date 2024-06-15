@@ -8,6 +8,7 @@
     <link href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 <body>
+<div th:replace="~{menu :: navegacion}"></div>
 <div class="container">
     <div class="container ">
         <h2>Lista de Estudiantes</h2>
@@ -23,7 +24,21 @@
             <th>Celular</th>
             <th>Edad</th>
             <th>Género</th>
+            <th>Año</th>
+            <th>Participación</th>
             <th>Promedio</th>
+            <th>Aprobados</th>
+            <th>Reprobados</th>
+            <th>Omitido</th>
+            <th>Continuidad</th>
+            <th>Estudio</th>
+            <th>Amigos</th>
+            <th>Deporte</th>
+            <th>Hobby</th>
+            <th>Estrés</th>
+            <th>Satisfacción</th>
+            <th>Empleo</th>
+            <th>Viaje</th>
         </tr>
         </thead>
         <tbody>
@@ -34,7 +49,21 @@
                 <td th:text="${studentDTO.getCellphone()}"></td>
                 <td th:text="${studentDTO.getAge()}"></td>
                 <td th:text="${studentDTO.getGender()}"></td>
+                <td th:text="${studentDTO.getYear()}"></td>
+                <td th:text="${studentDTO.getParticipation()}"></td>
                 <td th:text="${studentDTO.getAverage()}"></td>
+                <td th:text="${studentDTO.getApproved()}"></td>
+                <td th:text="${studentDTO.getFailed()}"></td>
+                <td th:text="${studentDTO.getOmitted()}"></td>
+                <td th:text="${studentDTO.getContinuity()}"></td>
+                <td th:text="${studentDTO.getStudy_time()}"></td>
+                <td th:text="${studentDTO.getFriend_time()}"></td>
+                <td th:text="${studentDTO.getSport_time()}"></td>
+                <td th:text="${studentDTO.getHobby_time()}"></td>
+                <td th:text="${studentDTO.getStress()}"></td>
+                <td th:text="${studentDTO.getSatisfaction()}"></td>
+                <td th:text="${studentDTO.getEmployment()}"></td>
+                <td th:text="${studentDTO.getTravel_time()}"></td>
             </tr>
         </th:each>
         </tbody>

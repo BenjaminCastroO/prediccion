@@ -1,7 +1,7 @@
-create database prediccion;
-use prediccion;
+create database prediccionv2;
+use prediccionv2;
 create table estudiantes (
- id int primary key,
+ id int primary key auto_increment,
  name varchar(45),
  mail varchar(45),
  cellphone varchar(45),

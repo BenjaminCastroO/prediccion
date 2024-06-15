@@ -1,6 +1,6 @@
 package cl.webprediccion.prediccion.web.controller;
-
 import cl.webprediccion.prediccion.model.domain.dto.StudentDTO;
+import cl.webprediccion.prediccion.model.domain.dto.UserDTO;
 import cl.webprediccion.prediccion.web.service.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,8 @@ public class EncuestaRestController {
   }
   @GetMapping
   public ResponseEntity<List<StudentDTO>> findAll(){
-    return service.findAll().map(StudentDTO -> new ResponseEntity<>(StudentDTO, HttpStatus.OK))
+    return service.findAll().map(StudentDTO -> new ResponseEntity<>(StudentDTO,
+                    HttpStatus.OK))
             .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
   @PostMapping("/create")

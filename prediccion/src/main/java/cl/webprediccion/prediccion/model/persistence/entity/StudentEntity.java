@@ -8,13 +8,12 @@ import lombok.*;
 @Setter
 @ToString
 @Entity
-@Table(name="estudiante")
+@Table(name="estudiantes")
 public class StudentEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name ="id")
   private int id;
-
   @Column(name="name")
   private String name;
   @Column(name="mail")
@@ -25,6 +24,34 @@ public class StudentEntity {
   private int age;
   @Column(name="gender")
   private String gender;
+  @Column(name="year")
+  private int year;
+  @Column(name="participation")
+  private String participation;
   @Column(name="average")
   private double average;
+  @Column(name="approved")
+  private int approved;
+  @Column(name="failed")
+  private int failed;
+  @Column(name="omitted")
+  private int omitted;
+  @Column(name="continuity")
+  private int continuity;
+  @Column(name="study_time")
+  private int study_time;
+  @Column(name="friend_time")
+  private int friend_time;
+  @Column(name="sport_time")
+  private int sport_time;
+  @Column(name="hobby_time")
+  private int hobby_time;
+  @Column(name="stress")
+  private int stress;
+  @Column(name="satisfaction")
+  private int satisfaction;
+  @Column(name="employment")
+  private String employment;
+  @Column(name="travel_time")
+  private int travel_time;
 }
